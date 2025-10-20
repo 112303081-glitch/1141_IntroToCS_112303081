@@ -1,0 +1,5 @@
+pdfplumber
+gspread
+oauth2client
+gspread-dataframe
+pandas
