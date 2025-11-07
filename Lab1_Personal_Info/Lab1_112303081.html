@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<form action="/action_page.php">  
+    <table border="1">
+        <tr>
+            <th colspan="3">
+            About -- 112303081
+        </tr>
+        <tr>
+            <td rowspan="4">
+              <img src="super.jpg" width="300px"height="50%"alt="personal photo">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+              Name:
+              <input type="text" name="addr"><br>
+              Gender:
+              <input type="radio" name="gender" value="male"> Male
+              <input type="radio" name="gender" value="female"> Female
+              <input type="radio" name="gender" value="other">Other
+            </td>
+        </tr>
+        <tr>
+            <td>
+              County:
+              <select name="county">
+                <option value="taipei">Taipei</option>
+                <option value="tainan">Tainan</option>
+                <option value="taichung">Taichung</option>
+                <option value="taoyuan">Taoyuan</option>
+            </td>
+            <td>
+              Birthday:
+              <label for="birthday">Birthday:</label>
+              <input type="date" id="birthday" name="birthday">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+              Email:
+              <input type="email" name="email"required>
+            </td>
+        </tr>
+        <tr>
+          <td>
+          Hobby:
+          </td>
+          <td colspan="2">
+            <input type="checkbox" name="hobby" value="swimming"> Swimming
+            <input type="checkbox" name="hobby" value="volleyball"> Volleyball
+            <input type="checkbox" name="hobby" value="movie"> Movie
+            <input type="checkbox" name="hobby" value="game"> Game
+            <input type="checkbox" name="hobby" value="sleep"> Sleep
+          </td>
+        </tr>
+        <tr>
+          <td>
+          Skill:
+          </td>
+          <td colspan="2">
+            <input type="checkbox" name="skill" value="java"> Java
+            <input type="checkbox" name="skill" value="html"> HTML
+            <input type="checkbox" name="skill" value="python"> Python
+            <input type="checkbox" name="skill" value="msoffice"> Microsoft Office
+            <input type="checkbox" name="skill" value="pr"> Premiere
+          </td>
+        </tr>
+        <tr>
+          <td>
+          Say Something:
+          </td>
+          <td colspan="2">
+          <textarea rows="3" cols="50" placeholder="Say something here." ></textarea>
+          </td> 
+        </tr>
+
+    </table>
+
+<br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+
+
+</body>
+</html>
