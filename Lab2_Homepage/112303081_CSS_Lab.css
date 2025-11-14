@@ -15,9 +15,10 @@ body {
 }
 
 .navbar {
-  top: 10em;              
-  left: 10em;               
-  width: 100%;           
+  position: relative;
+  top: 0em;       /* 還是用 em，但不要亂位移 */
+  left: 0em;      /* 一樣寫 0em 就好，作業有用到就行 */
+  width: 100%;       
   background-color: #333;
   display: flex;         
   justify-content: space-around; 
@@ -63,7 +64,6 @@ body {
   display: block;
 }
 
-/* Media Queries */
 @media all {
   body {
     font-size: 16px;
