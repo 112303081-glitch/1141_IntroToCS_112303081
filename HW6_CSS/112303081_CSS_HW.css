@@ -1,0 +1,197 @@
+/* 全站背景與置中容器 */
+body {
+  background-color: #eeede1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* 主容器 */
+.main-container {
+  display:flex;
+  width: 1000px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* 左側欄 */
+.left-panel {
+  width: 30%;
+  color: white;
+  background-color: #549ac9;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.text-content {
+  padding: 20px;
+  font-size: 14px;
+}
+
+.text-content a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.text-content a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+.text-title {
+  font-size: 16px;
+  padding-bottom: 10px;
+  /*margin-bottom: 10px;*/
+  border-bottom: 1px solid #ffffff;
+}
+
+.text-content ul {
+  padding-left: 20px;
+}
+
+.text-content li {
+  margin-bottom: 6px;
+}
+
+.nccu-logo {
+  width: 160px;
+  /*margin-top: 50px;*/
+}
+
+/* 右側欄 */
+.right-panel {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* 區塊標題 */
+.section-title {
+  font-size: 20px;
+  border-bottom: 2px solid #999;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* 教育區 */
+.timeline .item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.timeline .year {
+  font-weight: bold;
+  width: 40%;
+}
+
+.timeline .school {
+  width: 60%;
+}
+
+/* 技能徽章 */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #e0f0ff;
+  color: #0066cc;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* 作業與 Lab 區塊 */
+.hw-lab-container {
+  display: flex;
+  gap: 20px;
+}
+
+.hw-column,
+.lab-column {
+  width: 50%;
+  /*margin-bottom: 5px;*/
+  background-color: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.hw-column li, .lab-column li {
+  margin-bottom: 8px; 
+}
+
+.hw-column h3,
+.lab-column h3 {
+  margin-top: 0;
+}
+
+.hw-column a,
+.lab-column a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.hw-column a:hover,
+.lab-column a:hover {
+  text-decoration: underline;
+}
+
+/* 音樂區塊 */
+.music-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/*.music-list a {
+  text-align: center;
+  width: 23%;
+  color: inherit;
+  text-decoration: none;
+}*/
+
+.music-item {
+  width: 23%;
+  text-align: center;
+}
+
+.music-item a {
+  display: inline-block;
+}
+
+.music-list img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.music-list p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.music-note {
+  margin-top: 20px;
+  font-style: italic;
+  color: #333;
+}
