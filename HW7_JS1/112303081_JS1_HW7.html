@@ -21,7 +21,7 @@
   <input type="text" id="guessInput">
   <button onclick="play()">Guess!</button>
 
-  <div id="record"><strong>Game Record:</strong></div>
+  <div id="record">Game Record:</div>
 
   <script>
     var answer = generateAnswer();
@@ -33,7 +33,7 @@
       while (result.length < 4) {
         var index = Math.floor(Math.random() * digits.length);
         result += digits[index];
-        digits.splice(index, 1); // 移除已選的數字，避免重複
+        digits.splice(index, 1); 
       }
       return result;
     }
