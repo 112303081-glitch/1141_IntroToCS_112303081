@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>112303081_HW6_1A2B</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    #record {
+      margin-top: 20px;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>112303081_HW6_1A2B</h1>
+
+  <label for="guessInput">Enter 4 unique numbers</label>
+  <input type="text" id="guessInput">
+  <button onclick="play()">Guess!</button>
+
+  <div id="record"><strong>Game Record:</strong></div>
+
+  <script>
+    var answer = generateAnswer();
+    var attemptCount = 0;
+
+    function generateAnswer() {
+      var digits = ['0','1','2','3','4','5','6','7','8','9'];
+      var result = '';
+      while (result.length < 4) {
+        var index = Math.floor(Math.random() * digits.length);
+        result += digits[index];
+        digits.splice(index, 1); // 移除已選的數字，避免重複
+      }
+      return result;
+    }
+
+    function play() {
+      const input = document.getElementById("guessInput").value;
+      if (!isValid(input)) {
+        alert("請輸入4個不重複的數字！");
+        return;
+      }
+
+      attemptCount++;
+      const result = checkAB(input, answer);
+
+      const record = document.getElementById("record");
+      record.innerText += `\n第${attemptCount}次: ${input} → ${result}`;
+
+      if (result === "4A0B") {
+        alert(`恭喜你答對了！總共猜了 ${attemptCount} 次`);
+      }
+
+      document.getElementById("guessInput").value = "";
+    }
+
+    function isValid(str) {
+      if (str.length !== 4) return false;
+      if (!/^\d{4}$/.test(str)) return false; // 確保都是數字
+      const digits = new Set(str);
+      return digits.size === 4; // 檢查是否有重複
+    }
+
+    function checkAB(guess, ans) {
+      let A = 0, B = 0;
+      for (let i = 0; i < 4; i++) {
+        if (guess[i] === ans[i]) {
+          A++;
+        } else if (ans.includes(guess[i])) {
+          B++;
+        }
+      }
+      return `${A}A${B}B`;
+    }
+  </script>
+
+</body>
+</html>
