@@ -10,7 +10,7 @@ submitBtn.addEventListener("click", function () {
   var english = parseFloat(englishInput.value);
 
   if (isNaN(math) || isNaN(english)) {
-    alert("Please enter valid numbers for both Math and English.");
+    alert("Please enter valid numbers for both Math and English. 請輸入有效數字");
     return;
   }
 
