@@ -40,7 +40,7 @@ function addRowToTable(index, math, english) {
 function updateColumnAverages() {
   var mathTotal = 0, englishTotal = 0;
 
-  grades.forEach(entry => {
+  grades.forEach(function(entry) {
     mathTotal += entry.math;
     englishTotal += entry.english;
   });
